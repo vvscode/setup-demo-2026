@@ -1,0 +1,30 @@
+{
+  "name": "setup-demo-2026",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "npx prettier --check . && npx eslint .",
+    "lint:fix": "npx prettier --write . && npx eslint --fix .",
+    "prepare": "husky",
+    "test": "npx vitest --dom"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "happy-dom": "^21.0.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.1",
+    "prettier": "^3.10.1",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  },
+  "lint-staged": {
+    "*.{js,css,html,yml,json}": "npx prettier --write",
+    "*.js": "npx eslint --fix"
+  }
+}
